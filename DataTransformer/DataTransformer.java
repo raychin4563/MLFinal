@@ -80,8 +80,9 @@ class Data{
 			keys = (features.keySet()).toArray(new Integer[0]);
 			Arrays.sort(keys);
 			for(int key : keys){
-				if(features.get(key) > 0.01)
-					out.printf(" %d:1",key);
+				//if(features.get(key) > 0.01)
+				//	out.printf(" %d:1",key);
+				out.printf(" %d:1",key);
 			}
 		}
 		else if(methodNum == 2){
