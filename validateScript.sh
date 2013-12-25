@@ -3,8 +3,8 @@
 v_fold=5
 #first validate for C-svm
 svm_type=0
-train_data='./data/'
-test_data='./data'
+train_data='./data/normalized_train_data2'
+test_data='./data/normalized_test_data2'
 
 for kernel_degree in '1' '2' '3' '4'
 do
@@ -12,7 +12,7 @@ do
     do
 	for cost in '0.075' '0.1' '0.125' '0.15' '0.175' '0.2' '0.225'
 	do
-	    commandToRun="./libsvm-3.17/svm-tran -s $svm_type -t 1 -d $kernel_degree -g $gamma -c $cost -v $v_fold $train_data"
+	    commandToRun="./libsvm-3.17/svm-train -s $svm_type -t 1 -d $kernel_degree -g $gamma -c $cost -v $v_fold $train_data"
 	    echo $commandToRun >> validation.result
 	    $commandToRun|grep 'Cross Validation Accuracy' >> validation.result
 	done
