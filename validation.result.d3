@@ -1,0 +1,1 @@
+./libsvm-3.17/svm-train -s 0 -t 1 -d 3 -g 0.0025 -c 0.05 -v 5 ./data/normalized_train_data2
