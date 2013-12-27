@@ -14,7 +14,7 @@ public class DataTransformer{
 		}
 		DataTransformer df = new DataTransformer(args[0]);
 		df.parse();
-		df.toFile(1,args[1]);
+		df.toFile(2,args[1]);
 	}
 	public DataTransformer(String _fileName){
 		fileName = _fileName;
@@ -91,7 +91,9 @@ class Data{
 			keys = (features.keySet()).toArray(new Integer[0]);
 			Arrays.sort(keys);
 			for(int key : keys){
-				out.printf(" "+key);
+				if(key <= 12)
+					continue;
+				out.printf(" %d:1",key);
 			}
 		}
 		else if(methodNum == 3){
