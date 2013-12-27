@@ -14,7 +14,7 @@ public class DataTransformer{
 		}
 		DataTransformer df = new DataTransformer(args[0]);
 		df.parse();
-		df.toFile(2,args[1]);
+		df.toFile(1,args[1]);
 	}
 	public DataTransformer(String _fileName){
 		fileName = _fileName;
