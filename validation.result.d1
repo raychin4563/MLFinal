@@ -1,1 +1,84 @@
 ./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0025 -c 0.05 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 58.9518%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0025 -c 0.075 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 61.377%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0025 -c 0.1 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 62.793%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0025 -c 0.125 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 63.6556%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0025 -c 0.15 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 64.5833%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0025 -c 0.175 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 65.1042%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0025 -c 0.2 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 65.6413%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.005 -c 0.05 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 62.793%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.005 -c 0.075 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 64.5833%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.005 -c 0.1 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 65.6413%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.005 -c 0.125 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 66.097%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.005 -c 0.15 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 66.3737%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.005 -c 0.175 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 66.6829%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.005 -c 0.2 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 66.9271%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0075 -c 0.05 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 64.5833%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0075 -c 0.075 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 65.8854%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0075 -c 0.1 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 66.39%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0075 -c 0.125 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 66.7643%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0075 -c 0.15 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 67.0247%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0075 -c 0.175 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 67.1549%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0075 -c 0.2 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 67.2038%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.01 -c 0.05 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 65.6413%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.01 -c 0.075 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 66.3737%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.01 -c 0.1 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 66.9271%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.01 -c 0.125 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 67.1875%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.01 -c 0.15 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 67.2038%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.01 -c 0.175 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 67.1061%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.01 -c 0.2 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 66.8945%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0125 -c 0.05 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 66.097%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0125 -c 0.075 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 66.7806%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0125 -c 0.1 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 67.1875%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0125 -c 0.125 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 67.1712%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0125 -c 0.15 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 67.0085%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0125 -c 0.175 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 66.7643%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.0125 -c 0.2 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 66.4062%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.015 -c 0.05 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 66.39%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.015 -c 0.075 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 67.0247%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.015 -c 0.1 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 67.2038%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.015 -c 0.125 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 67.041%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.015 -c 0.15 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 66.748%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.015 -c 0.175 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 66.3737%
+./libsvm-3.17/svm-train -s 0 -t 1 -d 1 -g 0.015 -c 0.2 -v 5 ./data/trainDataWithNormalizedDis
+Cross Validation Accuracy = 65.8366%
