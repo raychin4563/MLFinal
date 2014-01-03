@@ -4,30 +4,37 @@ import numpy
 import sys
 
 def main():
-	if len(sys.argv) != 4:
-		print "Usage: [program] [train] [test] [output]"
+	if len(sys.argv) < 5:
+		print "Usage: [program] train test tree_num output [thread_num]"
 		return
+	elif len(sys.argv) == 5:
+		threadNum = 1
+	elif len(sys.argv) == 6:
+		threadNum = int(sys.argv[5])
+
+	print "try",int(sys.argv[3]),"trees with",threadNum,"threads"
+
 	trainData = dataProcessor(sys.argv[1])
 	testData = dataProcessor(sys.argv[2])
-
-	print "Data load over, start to generate trees"
-
 	target = [data.type for data in trainData]
 	train = [data.matrix for data in trainData]
 	test = [data.matrix for data in testData]
-	numpy.savetxt("target.csv",target,delimiter=",")
-	numpy.savetxt("train.csv",train,delimiter=",")
-	numpy.savetxt("test.csv",test,delimiter=",")
 
-	rf = RandomForestClassifier(n_estimators = 100,oob_score=True)
+#	target = numpy.genfromtxt("./data/target.csv",delimiter=",")
+#	train = numpy.genfromtxt("./data/train.csv",delimiter=",")
+#	test = numpy.genfromtxt("./data/test.csv",delimiter=",")
+	print "Data load over, start to generate trees"
+
+	rf = RandomForestClassifier(n_estimators = int(sys.argv[3]),n_jobs=threadNum,oob_score=True)
 
 	rf.fit(train,target)
 	print "fit done, # of class:",rf.n_classes_,", oob score:",rf.oob_score_
 
 	result = rf.predict(test)
-	fout = open(sys.argv[3],"w")
+	fout = open(sys.argv[4],"w")
 	for i in result:
-		fout.write(`i`+"\n")
+		tmp = int(i)
+		fout.write(`tmp`+"\n")
 	
 def dataProcessor(filepath):
 	fin = open(filepath)
@@ -49,6 +56,8 @@ class Data:
 	def sparseToDense(self, points):
 		tmp = [0 for k in range(20000)]
 		for point in points:
+			if point == "":
+				continue
 			place, value = point.split(":")
 			place = int(place)
 			value = float(value)
