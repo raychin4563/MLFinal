@@ -54,12 +54,12 @@ class Data:
 		self.type = float(points[0])
 		self.matrix = self.sparseToDense(points[1:])
 	def sparseToDense(self, points):
-		tmp = [0 for k in range(20000)]
+		tmp = [0 for k in range(2500)]
 		for point in points:
 			if point == "":
 				continue
 			place, value = point.split(":")
-			place = int(place)
+			place = int(place) - 1
 			value = float(value)
 			tmp[place] = value
 		return tmp
