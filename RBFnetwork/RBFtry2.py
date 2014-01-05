@@ -20,6 +20,8 @@ class RBF:
 		predict = [0]*len(data)
 		X = [d[1:] for d in data]
 		for tmp in range(len(X)):
+			print "("+`tmp`+")",
+			sys.stdout.flush()
 			x = X[tmp]
 			# one versus one multiclassification
 			count = [0 for l in range(self.classNum)]
@@ -58,13 +60,14 @@ class RBF:
 		#do one versus one train
 		for i in range(self.classNum):
 			for j in range(self.classNum):
-				print "("+`i`+","+`j`+")"
+				print "("+`i`+","+`j`+")" ,
+				sys.stdout.flush()
 				if i >= j:
 					continue
 				module, centerSet = self.twoClassTrain(classifiedData[i],classifiedData[j])
 				self.modules[(i,j)] = module
 				self.centerSets[(i,j)] = centerSet
-
+			print ""
 	def classifyData(self,data):
 		classified = []
 		classes = set()
@@ -127,8 +130,9 @@ def main():
 	print "training is done, cost: " + `time.clock() - timeRecord` + " secs"
 	print "start to test"
 
+	timeRecord = time.clock()
 	output, error = RBFclassifier.test(testData)
-	print "test is done, error rate: " + `error*100` + "%"
+	print "test is done, error rate: " + `error*100` + "%, cost:",(time.clock() - timeRecord)
 
 	fout = open(sys.argv[5],"w")
 	for o in output:

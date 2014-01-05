@@ -4,15 +4,18 @@ import numpy
 import sys
 
 def main():
-	if len(sys.argv) < 5:
-		print "Usage: [program] train test tree_num output [thread_num]"
+	if len(sys.argv) < 6:
+		print "Usage: [program] train test tree_num seed output [thread_num]"
 		return
-	elif len(sys.argv) == 5:
-		threadNum = 1
 	elif len(sys.argv) == 6:
-		threadNum = int(sys.argv[5])
+		threadNum = 1
+	elif len(sys.argv) == 7:
+		threadNum = int(sys.argv[6])
 
-	print "try",int(sys.argv[3]),"trees with",threadNum,"threads"
+	treeNum = int(sys.argv[3])
+	seed = int(sys.argv[4])
+
+	print "try",treeNum,"trees with",threadNum,"threads","and seed",seed
 
 	trainData = dataProcessor(sys.argv[1])
 	testData = dataProcessor(sys.argv[2])
@@ -25,13 +28,20 @@ def main():
 #	test = numpy.genfromtxt("./data/test.csv",delimiter=",")
 	print "Data load over, start to generate trees"
 
-	rf = RandomForestClassifier(n_estimators = int(sys.argv[3]),n_jobs=threadNum,oob_score=True)
-
+	rf = RandomForestClassifier(n_estimators = treeNum,n_jobs=threadNum,oob_score=True)
 	rf.fit(train,target)
+	train_r = rf.transform(train)
+	test_r = rf.transform(test)
+	
+	numpy.savetxt("train.csv",train_r,fmt="%d")
+	numpy.savetxt("test.csv",test_r,fmt="%d")
+	numpy.savetxt("target.csv",target,fmt="%d")
+	numpy.savetxt("ans.csv",[0]*len(test_r),fmt="%d")
+
 	print "fit done, # of class:",rf.n_classes_,", oob score:",rf.oob_score_
 
 	result = rf.predict(test)
-	fout = open(sys.argv[4],"w")
+	fout = open(sys.argv[5],"w")
 	for i in result:
 		tmp = int(i)
 		fout.write(`tmp`+"\n")
